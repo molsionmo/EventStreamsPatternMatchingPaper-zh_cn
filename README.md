@@ -8,4 +8,4 @@ Flink的CEP实现重度参考了论文 《Efficient Pattern Matching over Event 
 
 英文[论文地址](https://people.cs.umass.edu/~yanlei/publications/sase-sigmod08.pdf)
 
-中文[翻译地址](../EventStreamPattern/cep-sase-sigmod08.md)
+中文[翻译地址](./EventStreamPattern/cep-sase-sigmod08.md)
