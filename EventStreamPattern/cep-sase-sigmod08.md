@@ -320,7 +320,7 @@ W的影响很小事件选择策略为s 2，例如p 2 s 2。然而，如果谓词
 这三个查询代表以下内容的有趣组合这两个因素。谓词p 1（= true）允许共享机会最多：所有重叠的运行可以合并同一分区。但是，p 1导致长查询匹配，因此维护的开销很高选择事件时的匹配缓冲区。谓词价格严格提高，p 2，仍允许大量分享：一旦两次运行的价格与上次选择的价格相同事件，它们可以合并。另外，p 2是选择性的，因此缓冲区更新成本相对较低。结果，p 2达到对于较大的W值，可以获得更高的吞吐量。最后，谓词p 3需要两次遍历以商定最小值价格以便合并，提供较少的共享机会。由于它不是选择性的，所以它也有很高的缓冲更新成本为p 1。结合这两个因素，p 3仅能实现对于较大的W值，获得的吞吐量有限。
 
 表3：Expt6的分析结果运行合并
-![Expt6的分析结果运行合并.png](./img/Expt6的分析结果运行合并.png3)
+![Expt6的分析结果运行合并.png](./img/Expt6的分析结果运行合并.png)
 
 **其他实验**。探索不同的影响-ent数据特征，我们还改变了事件流中的股票价格上涨。我们简要地总结一下-调整以下结果。当使用较小的p值时，例如，p = 0.55，则使用谓词p 1的查询具有相同的条件性能，因为他们只是选择每个事件中的每个事件划分。相比之下，使用谓词p 2的查询和p 3产生更少的比赛，因此都获得更高的比赛吞吐量数字。我们基本算法的优势回溯仍然存在，但幅度较小。上另一方面，合并和基本算法甚至更高。这是因为匹配次数越少，序列构建的成本就越低，合并的好处在存在两种算法共同的低序列构建成本。
 
@@ -350,39 +350,39 @@ W的影响很小事件选择策略为s 2，例如p 2 s 2。然而，如果谓词
 
 ## 10.参考
 
-[1] J. Agrawal，Y。Diao等。高效的模式匹配通过事件流。大学技术报告07-63马萨诸塞州阿默斯特学院，2007年。
-[2] MK Aguilera，RE Strom等。匹配中的事件基于内容的订阅系统。在PODC，53-61，1999年。
-[3] A. Arasu，S。Babu等。CQL：一种用于连续查询流和关系。在DBPL，1-19，2003年。
-[4] F. Bancilhon和R. Ramakrishnan。一个业余的递归查询处理策略简介。在SIGMOD中，为16–52。1986年。
-[5] RS Barga，J。Goldstein等。一致的流穿越时间：事件流处理的愿景。在CIDR，363-374，2007年。
-[6] S. Chakravarthy，V. Krishnaprasad等。综合活动数据库的事件：语义，上下文和检测。在VLDB中，606-617，1994年。
-[7] S. Chandrasekaran，O. Cooper等。电报CQ：连续的数据流处理，带来不确定性世界。在CIDR中，2003年。
-[8] M. Cherniack，H。Balakrishnan等。可扩展分布式流处理。在CIDR中，2003年。
-[9] Coral8. http://www.coral8.com/.
-[10] AJ Demers，J。Gehrke等人。走向表现力发布/订阅系统。在EDBT中，627–644，2006年。
-[11] AJ Demers，J。Gehrke等人。卡尤加：一般目的事件监视系统。在CIDR中，2007年。
-[12] F. Fabret，H.-A。雅各布森等。过滤算法以及用于快速发布/订阅的实现。在SIGMOD，115-126，2001年。
-[13] S. Gatziu和KR Dittrich。活动中的活动面向对象的数据库系统。在数据库规则中系统，1993年，第23-39页。
-[14] NH Gehani，HV Jagadish等。复合事件活动数据库中的规范：模型和实施。VLDB，327-338，1992年。
-[15] D. Gyllstrom，J。Agrawal等。关于支撑克雷尼关闭事件流。在ICDE，2008年。海报。
-[16] L. Harada and Y. Hotta. Order checking in a CPOE using event analyzer. In CIKM, 549–555, 2005.
-[17] JE Hopcroft，R。Motwani和JD Ullman。状态机理论，语言和语言概论计算。Addison-Wesley，2006年。
-[18] N. Immerman。描述性复杂性。毕业计算机科学中的文本。纽约，施普林格，1999年。
-[19] S. Kumar，B。Chandrasekaran等。定期固化失眠的表达式匹配算法，健忘症和失语症。在ANCS中，155-164，2007年。
-[20] M. Li，M。Liu等。事件流处理乱序数据到达。在国际会议上。在分布式计算系统研讨会，第67页，2007年。
-[21] L. Libkin和L. Wong。一元量词，可传递封闭，与关系的程度很大。在过程中。的第十五届年度理论理论研讨会计算机科学（STAC），183-193，1998年。
-[22] DF Lieuwen，NH Gehani等。颂歌活跃数据库：触发语义和实现。在Su SYW Su，ICDE编辑，412–420，1996年。
-[23] R. Meo，G. Psaila等。嵌合体中的复合事件。在EDBT中，1996年第56-76页。
-[24] R. Motwani，J。Widom等。查询处理数据中的近似和资源管理流管理系统。在CIDR中，2003年。
-[25] S. Rizvi，SR Jeffery等。边缘事件。在SIGMOD，885–887，2005年。
-[26] R. Sadri，C. Zaniolo等。表达和优化数据库系统中的序列查询。ACM Trans。数据库系统，29（2）：282-318，2004年。
-[27] P. Seshadri，M。Livny等。设计和序列数据库系统的实现。在VLDB，99-110，1996年。
-[28] Pattern matching in sequences of rows. SQL changeproposal. http://asktom.oracle.com/tkyte/row-pattern-recogniton-11-public.pdf. 2007
-[29] StreamBase。http://www.streambase.com/。
-[30] Truviso. http://www.truviso.com/.
-[31] F. Wang和P. Liu。RFID的时间管理数据。在VLDB中，1128年至1139年，2005年。
-[32] I. Wegener。分支程序和二进制决策图：理论和应用。学会费城工业与应用数学美国宾夕法尼亚州，2000年。
-[33] WM White，M。Riedewald等。什么是“下一个”事件处理？在PODS中，263–272，2007年。
-[34] E. Wu，Y。Diao和S. Rizvi。高性能的流上复杂的事件处理。在SIGMOD中407–418，2006年。
-[35] F. Yu，Z。Chen，等。快速且高效存储深度数据包的正则表达式匹配检查。在ANCS中，93–102，2006年。
-[36] D. Zimmer和R. Unland。论语义主动数据库管理中的复杂事件系统。见ICDE，392-399，1999年
+1. J. Agrawal，Y。Diao等。高效的模式匹配通过事件流。大学技术报告07-63马萨诸塞州阿默斯特学院，2007年。
+2. MK Aguilera，RE Strom等。匹配中的事件基于内容的订阅系统。在PODC，53-61，1999年。
+3. A. Arasu，S。Babu等。CQL：一种用于连续查询流和关系。在DBPL，1-19，2003年。
+4. F. Bancilhon和R. Ramakrishnan。一个业余的递归查询处理策略简介。在SIGMOD中，为16–52。1986年。
+5. RS Barga，J。Goldstein等。一致的流穿越时间：事件流处理的愿景。在CIDR，363-374，2007年。
+6. S. Chakravarthy，V. Krishnaprasad等。综合活动数据库的事件：语义，上下文和检测。在VLDB中，606-617，1994年。
+7. S. Chandrasekaran，O. Cooper等。电报CQ：连续的数据流处理，带来不确定性世界。在CIDR中，2003年。
+8. M. Cherniack，H。Balakrishnan等。可扩展分布式流处理。在CIDR中，2003年。
+9. Coral8. http://www.coral8.com/.
+10. AJ Demers，J。Gehrke等人。走向表现力发布/订阅系统。在EDBT中，627–644，2006年。
+11. AJ Demers，J。Gehrke等人。卡尤加：一般目的事件监视系统。在CIDR中，2007年。
+12. F. Fabret，H.-A。雅各布森等。过滤算法以及用于快速发布/订阅的实现。在SIGMOD，115-126，2001年。
+13. S. Gatziu和KR Dittrich。活动中的活动面向对象的数据库系统。在数据库规则中系统，1993年，第23-39页。
+14. NH Gehani，HV Jagadish等。复合事件活动数据库中的规范：模型和实施。VLDB，327-338，1992年。
+15. D. Gyllstrom，J。Agrawal等。关于支撑克雷尼关闭事件流。在ICDE，2008年。海报。
+16. L. Harada and Y. Hotta. Order checking in a CPOE using event analyzer. In CIKM, 549–555, 2005.
+17. JE Hopcroft，R。Motwani和JD Ullman。状态机理论，语言和语言概论计算。Addison-Wesley，2006年。
+18. N. Immerman。描述性复杂性。毕业计算机科学中的文本。纽约，施普林格，1999年。
+19. S. Kumar，B。Chandrasekaran等。定期固化失眠的表达式匹配算法，健忘症和失语症。在ANCS中，155-164，2007年。
+20. M. Li，M。Liu等。事件流处理乱序数据到达。在国际会议上。在分布式计算系统研讨会，第67页，2007年。
+21. L. Libkin和L. Wong。一元量词，可传递封闭，与关系的程度很大。在过程中。的第十五届年度理论理论研讨会计算机科学（STAC），183-193，1998年。
+22. DF Lieuwen，NH Gehani等。颂歌活跃数据库：触发语义和实现。在Su SYW Su，ICDE编辑，412–420，1996年。
+23. R. Meo，G. Psaila等。嵌合体中的复合事件。在EDBT中，1996年第56-76页。
+24. R. Motwani，J。Widom等。查询处理数据中的近似和资源管理流管理系统。在CIDR中，2003年。
+25. S. Rizvi，SR Jeffery等。边缘事件。在SIGMOD，885–887，2005年。
+26. R. Sadri，C. Zaniolo等。表达和优化数据库系统中的序列查询。ACM Trans。数据库系统，29（2）：282-318，2004年。
+27. P. Seshadri，M。Livny等。设计和序列数据库系统的实现。在VLDB，99-110，1996年。
+28. Pattern matching in sequences of rows. SQL changeproposal. http://asktom.oracle.com/tkyte/row-pattern-recogniton-11-public.pdf. 2007
+29. StreamBase。http://www.streambase.com/。
+30. Truviso. http://www.truviso.com/.
+31. F. Wang和P. Liu。RFID的时间管理数据。在VLDB中，1128年至1139年，2005年。
+32. I. Wegener。分支程序和二进制决策图：理论和应用。学会费城工业与应用数学美国宾夕法尼亚州，2000年。
+33. WM White，M。Riedewald等。什么是“下一个”事件处理？在PODS中，263–272，2007年。
+34. E. Wu，Y。Diao和S. Rizvi。高性能的流上复杂的事件处理。在SIGMOD中407–418，2006年。
+35. F. Yu，Z。Chen，等。快速且高效存储深度数据包的正则表达式匹配检查。在ANCS中，93–102，2006年。
+36. D. Zimmer和R. Unland。论语义主动数据库管理中的复杂事件系统。见ICDE，392-399，1999年
